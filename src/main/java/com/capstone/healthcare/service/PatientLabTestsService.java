@@ -1,0 +1,38 @@
+package com.capstone.healthcare.service;
+
+import com.capstone.healthcare.common.modules.PageListResult;
+import com.capstone.healthcare.query.PatientLabTestsQuery;
+import com.capstone.healthcare.service.bo.PatientLabTestsBO;
+
+import java.util.List;
+/**
+ * 
+ * 
+ * @author xw
+ * @email xw
+ * @date 2023-10-16 09:23:19
+ */
+public interface PatientLabTestsService {
+
+    /**
+	 * @param
+	 * @return
+	 */
+    void add(PatientLabTestsBO patientLabTestsBO);
+
+    /**
+     * @param
+     * @return
+     */
+    void update(PatientLabTestsBO patientLabTestsBO);
+
+
+    /**
+     * query
+     * @param query
+     * @return
+     */
+    List<PatientLabTestsBO> findList(PatientLabTestsQuery query);
+
+    PageListResult<PatientLabTestsBO> findPage(PatientLabTestsQuery query);
+}
